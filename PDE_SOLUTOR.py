@@ -5,34 +5,17 @@ Created on Sun Nov 19 14:06:03 2017
 @author: Alpharius
 
 SOLUTOR
-|
-|---explisit_differential_scheme
-|---A
-|---create_df_for_temp
-|---save
+    |
+    |---explisit_differential_scheme
+    |---A
+    |---create_df_for_temp
+    |---save
 """
 import numpy as np
 import pandas as pd
 from math import *
 from Electric_fild import *
 from Ionclass import *
-
-class Phisic_priperties():
-    """
-    В этом классе я введу все физические свойства интересующего материала
-    (железа) и свойства электронов
-    """
-    def C_e(self, T_e):
-        pass
-    
-    def C_I(self, T_i):
-        pass
-    
-    def K_e(self, T_e):
-        pass
-    
-    def K_i(self, T_i):
-        pass
     
 
 class SOLUROR(Phisic_priperties):
@@ -91,7 +74,7 @@ class SOLUROR(Phisic_priperties):
         """
         time -  безразмерная постоянная для измерения долей масштаба 
         (вариируем для устойчивости)
-        dx -
+        dx - то же самое но для координаты
         
         те это расстояния между соседними узлами сетки в безразмерных параметрах
         вся размерность учтена в self.skale...
@@ -137,7 +120,7 @@ class SOLUROR(Phisic_priperties):
         """
         r_0 = 2e-7                          #характерная область существования поля
         t_0 = 1e-15                         #характерное время термализации электронов
-        C = 1./(4*sqrt(2)*pi*r_0**2*t_0*)   #нормировочная кончстанта
+        C = 1./(4*sqrt(2)*pi*r_0**2*t_0)   #нормировочная кончстанта
         if t>2e-15:
             return 0
         else:
@@ -164,7 +147,10 @@ class SOLUROR(Phisic_priperties):
         pass
         
         
-        
+class Experimental_cls():
+    self.phy_property = (1,2,3,4)
+    self.bound_condition = ([],[])
+    self.grid
         
         
         
